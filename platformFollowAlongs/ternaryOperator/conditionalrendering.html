@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional Rendering</title>
+  <style>
+    .color-box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <label for="number-input">Enter a number:</label>
+  <input type="number" id="number-input">
+  <button onclick="changeColor()">Change Color</button>
+  <div id="color-box" class="color-box"></div>
+
+  <script>
+      let numberInputElement = document.getElementById('number-input')
+      let colorBoxElement = document.getElementById("color-box");
+
+      function changeColor() {
+        let value = numberInputElement.value;
+        colorBoxElement.style.backgroundColor = value > 5 ? "blue" : "red"
+      }
+
+      numberInputElement.addEventListener("input", changeColor)
+      changeColor()
+  </script>
+</body>
+</html>
