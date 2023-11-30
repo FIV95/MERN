@@ -16,12 +16,16 @@ function App() {
 }
 
 function PersonCard(props) {
-  console.log('props: ', props);
+	const [age, setAge] = useState(props.propName.age);
+	const increaseAge = () => {
+		setAge(age + 1);
+	}
 	return (
 		<div>
 			<h2>{props.propName.firstname}, {props.propName.lastname}</h2>
-			<p>Age : {props.propName.age}</p>
+			<p>Age : {age}</p>
 			<p>Hair Color: {props.propName.haircolor}</p>
+			<button onClick={increaseAge}>Increase Age</button>
 		</div>
 	);
 }
