@@ -110,3 +110,4 @@ console.log(totalByCategory);
 // ```
 
 // This means the total price for the 'Electronics' category is 300, for 'Clothing' it's 130, and for 'Furniture' it's 700.
+
